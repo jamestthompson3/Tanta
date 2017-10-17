@@ -1,0 +1,53 @@
+{% extends "home_page/base.html" %}
+{% load staticfiles %}
+{% block body_block %}
+
+<script type="text/javascript">
+$('document').ready(function(){
+	$(function(){
+		mixpanel.track("You might want to set your mixpanel API Key to an environmental variable. I'm available to help, and you're hiring. Let's start a beautiful partnership! taylor7dmt@gmail.com")
+	});
+    $(function(){
+      $("#changethewords").changeWords({
+        time: 2000,
+        animate: "fadeIn",
+        selector: "span",
+        repeat: false
+      });
+    });
+    });
+  </script>
+
+<div class="center py4 my4 white bg-gray bg-cover bg-center" style="background-image: url(https://c1.staticflickr.com/2/1665/24487101292_6a0345feb5_h.jpg); height: 400px; width: 100vw;">
+<h1 style="color: #2b2d30; font-family: 'Fjalla One'; font-size: 61px;">Welcome to TantaPay</h1>
+
+	<div class="clearfix mxn2 my4 py4" id="changethewords">
+	<h2 style="color: #2b2d30;">Imagine a world without
+	<span data-id='1'>banks</span>
+	<span data-id='2'>credit cards</span>
+	<span data-id='3'>borders</span>
+	<span data-id='4'>limits.</span></h2>
+	</div>
+
+</div>
+
+</div>
+<div class="center container mt0 rounded" style="background: #ffd468; height: 300px;">
+<div class="col-8 px2 mx-auto mt2">
+	<h3 class="mt4" style="color: #161515; font-family: 'PT Sans Narrow';">
+	At TantaPay, <strong><em>you</em></strong> control your money. There is no minimum balance required in
+your wallet, no inactivity fees, and no sales gimmicks to upgrade your service or
+increase your fees. Choose the currencies you want to hold in your wallet, and hold
+them for as long as you want.
+</h3>
+<a class="btn btn-default mt3 mb4" href="{% url 'home_page:about' %}" role="button">Learn more</a>
+
+</div>
+
+</div>
+</div>
+
+
+{% endblock body_block %}
+</body>
+</html>

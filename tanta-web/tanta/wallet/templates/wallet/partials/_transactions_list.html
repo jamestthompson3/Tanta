@@ -1,0 +1,41 @@
+{% load static %}
+<div class="center px2 py3 ml4">
+<div class='container ml2'>
+{% if sent.count > 0 or changed.count > 0 or recieved.count > 0%}
+    
+<h2 class="h1 center mr4 pr4 mb0">Recent Activity</h2>
+{% endif %}
+
+<div class="center mxn2">
+
+</div>
+<div class="sm-col sm-col-3 ml2 p2">
+    {% for transfer in sent %}
+
+    <strong><h4 class="mb0">Sent {{transfer.reciever}} {{transfer.amount}} {{transfer.currency}}</h4></strong> on {{transfer.transfer_date|date:'M d, Y P'}}
+    {% endfor %}
+    </div>
+<div class="sm-col sm-col-3 ml2 p2">
+    {% for transfer in received %}
+     <h4 class="mb0"><strong><span style="color: #32c1a5;">Recieved</span></strong> {{transfer.amount}} {{transfer.currency}}</h5> from {{transfer.sender}} on {{transfer.transfer_date|date:'M d, Y P'}}
+     {% endfor %}
+     </div>
+
+<div class="sm-col sm-col-3 ml2 p2">
+    {% for transfer in changed %}
+    <strong><h4 class="mb0">You changed {{transfer.amount}} {{transfer.currency}}</h4></strong>
+    to {{transfer.changed_amount}} {{transfer.changed_currency}} on {{transfer.transfer_date|date:'M d, Y P'}}
+
+    {% endfor %}
+    </div> 
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+    
+     </div>
+</div>

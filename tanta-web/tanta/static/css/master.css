@@ -1,0 +1,106 @@
+:root {
+  --blue: #007ce0;
+  --blue0: #f5fafd;
+  --blue1: #e0effb;
+  --blue2: #cae4f8;
+  --blue3: #b2d7f5;
+  --blue4: #96c9f2;
+  --blue5: #77b9ee;
+  --blue6: #51a6e9;
+  --blue7: #218de4;
+  --blue8: #006dc5;
+  --blue9: #004074
+}
+.blue { color: var(--blue) }
+.blue0 { color: var(--blue0) }
+.blue1 { color: var(--blue1) }
+.blue2 { color: var(--blue2) }
+.blue3 { color: var(--blue3) }
+.blue4 { color: var(--blue4) }
+.blue5 { color: var(--blue5) }
+.blue6 { color: var(--blue6) }
+.blue7 { color: var(--blue7) }
+.blue8 { color: var(--blue8) }
+.blue9 { color: var(--blue9) }
+.bg-blue { background-color: var(--blue) }
+.bg-blue0 { background-color: var(--blue0) }
+.bg-blue1 { background-color: var(--blue1) }
+.bg-blue2 { background-color: var(--blue2) }
+.bg-blue3 { background-color: var(--blue3) }
+.bg-blue4 { background-color: var(--blue4) }
+.bg-blue5 { background-color: var(--blue5) }
+.bg-blue6 { background-color: var(--blue6) }
+.bg-blue7 { background-color: var(--blue7) }
+.bg-blue8 { background-color: var(--blue8) }
+.bg-blue9 { background-color: var(--blue9) }a
+.col-md-3 {
+  padding-left: 5;
+}
+body{
+	margin: auto;
+	padding: auto;
+	font-family:'News Cycle', sans-serif;
+  font-weight: 600;
+  float:auto;
+  background: radial-gradient(farthest-corner at 45px 45px, #0160ad, #004074);
+
+.jumbotron{
+  opacity: 0.9;
+  margin: auto;
+  padding: auto;
+  box-shadow: 7px 7px 5px #474744;
+  background: #d0d3cf;
+
+}
+.container{
+  display:flex;
+  align-content: center;
+}
+
+img{
+  height: 42px;
+  width: 42px;
+}
+
+h2{
+  color: #0f1319;
+}
+#navlist{
+  font-size: 20px;
+}
+strong{
+  color: #43a024;
+}
+h1{
+  font-family: 'Catamaran', sans-serif
+}
+p{
+  color: #0f1319;
+}
+sub{
+  color: #1e232b;
+
+}
+#fxbtn{
+  margin-left: 25px;
+}
+.container-welcome{
+  padding: auto;
+  margin: auto;
+  position: relative;
+  left: 10%;
+
+}
+header {
+  padding: 10px;
+  font-family: "News Cycle", sans-serif;
+  background-color: #18b2f4;
+  margin:auto;
+  font-style: normal;
+  font-weight: 600;
+  color: #700;
+  width: 100%;
+}
+nav{
+  margin: 10px;
+}

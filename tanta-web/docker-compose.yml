@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+  web:
+    build: .
+    env_file:
+      - tanta_vars.env
+    command: python tanta/manage.py runserver 0.0.0.0:8000 --settings=Tanta.local
+    volumes:
+      - .:/tanta
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db

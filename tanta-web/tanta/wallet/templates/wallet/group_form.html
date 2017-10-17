@@ -1,0 +1,23 @@
+{% extends "wallet/base.html" %}
+{% block content %}
+
+<div class="center container">
+<h2>Create a Group!</h2>
+<h4>Get started by creating a borrowing or lending group and invite your friends to join!</h4>
+<form method="POST">
+	{% csrf_token %}
+	{{form.as_p}}
+	<input type="hidden" name="next" value='{{ request.GET.next }}'>
+	<button type="submit" id='btn-submit'>Create</button>
+</form>
+<script>
+	$(document).ready(function(){
+			$('#btn-submit').submit(
+				mixpanel.track('Group Created', {
+					'group name': $('#id_name').val()
+				})
+				);
+	});
+</script>
+</div>
+{% endblock content %}

@@ -1,0 +1,44 @@
+.modal {
+	background: #fff;
+	padding: 10px;
+	opacity: 1;
+	top: 50%;
+	left: 50%;
+	z-index: 1000;
+	box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .5);
+}
+:root {
+  --teal: #00e09d;
+  --teal0: #edfcf8;
+  --teal1: #c5f8e8;
+  --teal2: #95f2d6;
+  --teal3: #57eabe;
+  --teal4: #00de9c;
+  --teal5: #00cb8e;
+  --teal6: #00b57f;
+  --teal7: #009c6d;
+  --teal8: #007b56;
+  --teal9: #004833
+}
+.teal { color: var(--teal) }
+.teal0 { color: var(--teal0) }
+.teal1 { color: var(--teal1) }
+.teal2 { color: var(--teal2) }
+.teal3 { color: var(--teal3) }
+.teal4 { color: var(--teal4) }
+.teal5 { color: var(--teal5) }
+.teal6 { color: var(--teal6) }
+.teal7 { color: var(--teal7) }
+.teal8 { color: var(--teal8) }
+.teal9 { color: var(--teal9) }
+.bg-teal { background-color: var(--teal) }
+.bg-teal0 { background-color: var(--teal0) }
+.bg-teal1 { background-color: var(--teal1) }
+.bg-teal2 { background-color: var(--teal2) }
+.bg-teal3 { background-color: var(--teal3) }
+.bg-teal4 { background-color: var(--teal4) }
+.bg-teal5 { background-color: var(--teal5) }
+.bg-teal6 { background-color: var(--teal6) }
+.bg-teal7 { background-color: var(--teal7) }
+.bg-teal8 { background-color: var(--teal8) }
+.bg-teal9 { background-color: var(--teal9) }

@@ -1,0 +1,1 @@
+{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"/Volumes/taylorhd/code/tantapay","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}},"virtualbox":{"/home/vagrant/tanta-web":{"guestpath":"/home/vagrant/tanta-web","hostpath":"/Volumes/taylorhd/code/tantapay/tanta-web","disabled":false,"__vagrantfile":true}}}

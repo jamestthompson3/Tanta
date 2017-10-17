@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% extends 'home_page/base.html'%}
+</head>
+{% block body_block %}
+<body>
+</div>
+</nav>
+<div id="jumbo" class="container">
+	<div class="jumbotron">
+		<h1>Contact Us!</h1>
+		<p id="sub">Let us know how we can help you.</p>
+	</div>
+</div>
+<div id="form" class="container">
+	<form class="form-group" method='POST'>
+	 {{ form.as_p}}
+	 {% csrf_token %}
+
+	<!-- <input type="text" class="form-control" placeholder="First Name" name="userfirst">
+	<br>
+
+	
+	<input type="text" class="form-control" placeholder="Last Name" name="userlast">
+	<br>
+	
+	<input type="email" class="form-control" name="userem" placeholder="Email">
+	<br>
+
+	<input type="text" class="form-control" placeholder="Business" name="bus">
+	<br>
+
+	<textarea class="form-control" name="comments" rows=5 cols=100 placeholder="Describe your project. What problems are you facing? What ideas do you have already?"></textarea>
+	<br> -->
+	<button id='button1' type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+<script>
+	$('document').ready(function(){
+	$(function(){
+		mixpanel.track('View Contact Us')
+	});
+</script>
+{% endblock %}	
+	
+</body>
+</html>

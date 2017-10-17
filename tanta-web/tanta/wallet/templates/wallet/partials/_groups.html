@@ -1,0 +1,16 @@
+{% if group_list.count > 0 %}
+<h3>Your Groups Are:</h3>
+<div class="center container">
+{% for item in group_list %}
+{% if item.group.group_type == 'borrow' %}
+    <div class="justify-start sm-col sm-col-4 mx4 p2">
+    {{item.group}}
+    </div>
+{% else %}
+<div class="justify-end sm-col sm-col-4 mx4 p2">
+    {{item.group}}
+    </div>
+{% endif %}
+{% endfor %}
+{% endif %}
+</div>

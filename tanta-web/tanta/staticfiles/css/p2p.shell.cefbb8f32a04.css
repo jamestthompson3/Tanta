@@ -1,0 +1,26 @@
+.border-top.border-right.border-left.rounded-top.px1:hover {
+	background: #cccccc !important;
+}
+.view {
+	background: #fafafa;
+	cursor: pointer;
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+	width: 73px;
+	z-index: 1;
+	border-radius: 7px 7px 0 0;
+	right: 200px;
+}
+.border-top.border-right.border-left.rounded-top.px1:before{
+  border-radius: 12px 0 0 0;
+  transform: skew(-24deg);
+  left: -13px; /* play with this one to give the LI border ~2px extrusion */
+}
+.border-top.border-right.border-left.rounded-top.px1:after{
+  border-radius: 0 12px 0 0;
+  transform: skew(24deg);
+  right: -13px; /* play with this one to give the LI border ~2px extrusion */
+  border-right: 1px solid #628E2F;
+  z-index: 1; /* overlap next element */
+}

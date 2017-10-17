@@ -1,0 +1,30 @@
+body{
+	margin: auto;
+	padding: auto;
+	font-family:'News Cycle', sans-serif;
+  font-weight: 600;
+  float:auto;
+  background: #c5f8e8;
+}
+#navlist{
+  font-size: 20px;
+}
+
+.jumbotron{
+  opacity: 0.9;
+  margin: auto;
+  padding: auto;
+  box-shadow: 7px 7px 5px #474744;
+  background: #d0d3cf;
+
+}
+.container{
+  display:flex;
+  align-content: center;
+}
+
+img {
+  height: 42px;
+  width: 42px;
+
+}

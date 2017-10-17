@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% extends "home_page/base.html" %}
+{% load staticfiles %}
+{% block body_block %}
+    
+
+<div id=jumbo class="jumbotron">
+<div class="container">
+<h1>What we do</h1>
+<h3>WALLET</h3>
+
+<p>More than 2 billion of the world’s people are unbanked, primarily due to a lack of
+access and high costs. At TantaPay, our mission is to get the entire world access to
+financial services.</p>
+<p>If you are a foreign worker looking to send money home to your family, a world
+traveler looking for the easiest way to get foreign currency, a small business owner
+looking to expand, or an ambitious saver looking for a place to put your savings to
+work, we have a solution for you.</p>
+<h3>TRANSFERS</h3>
+<p class="sub">
+TantaPay believes payments should be fast, easy, and secure, no matter where you
+are. Send money to your family overseas instantly, and without big transaction fees.
+Pay your friends, your taxi driver, or your favorite restaurant instantly, securely,
+and without the need for a bulky wallet.</p>
+
+<h3>FOREIGN EXCHANGE</h3>
+<p class="sub">Change currencies when you’re traveling without the hassle or fees of a Foreign
+Exchange bureau. Exchange as much or as little money as you want, when you want,
+at current market rates, without exchange fees. When you’re home, change back to
+your local currency with the same ease and convenience, or keep the foreign
+currency until your next trip.</p>
+
+<h3>LEND</h3>
+<p class="sub">No matter how much money you have today, we believe that everyone should have
+an opportunity to build wealth. At TantaPay you can start building your wealth
+today by lending to other TantaPay users based on your time horizon and risk
+tolerance, putting your financial future in your own hands.
+</p>
+<h3>BORROW</h3>
+<p>At TantaPay you can build a fair credit score based on your activity, not someone
+else’s metrics, allowing you to borrow money based on your credit worthiness, not
+the value of assets you can use as collateral. We allow the market to set the loan
+terms, so you can know you are getting the best possible rate. As you build credit,
+you can borrow larger amounts of money on better terms, creating a virtuous cycle
+of growth for your business.</p>
+</div>
+</div>
+
+<script>
+	$('document').ready(function(){
+	$(function(){
+		mixpanel.track('View About Us')
+	});
+</script>
+</body>
+</html>
+{% endblock body_block %}

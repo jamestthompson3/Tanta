@@ -1,0 +1,6 @@
+.border-top.border-right.border-left.rounded-top.px1:hover {
+	background: #cccccc !important;
+}
+.border-top.border-right.border-left.rounded-top.px1 {
+	border-radius: 7px 7px 0 0;
+}

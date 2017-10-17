@@ -1,0 +1,50 @@
+from django import forms
+from django.core import validators
+from home_page.models import NewLead
+from django.contrib.auth.models import User
+from home_page.models import UserProfileInfo
+
+
+class NewLead(forms.ModelForm):
+	class Meta:
+		model=NewLead
+		fields=['name','email','text']
+		labels={
+		''
+		}
+		widgets={
+		'name' : forms.TextInput(attrs={'placeholder':'Name'}),
+		'email': forms.TextInput(attrs={'placeholder':'Email'}),
+		'text':forms.Textarea(attrs={'cols':100,'rows':10,'placeholder':'What can we do for you?'})
+		}
+		
+	def clean(self):
+		all_clean_data=super().clean()
+		email=all_clean_data['email']
+		vmail=all_clean_data['verify_email']
+		if email != vmail:
+			raise forms.ValidationError("Make sure emails match")
+
+
+class UserForm(forms.ModelForm):
+	password=forms.CharField(widget=forms.PasswordInput())
+
+	class Meta():
+		model=User
+		fields=('username','password')
+	def clean_username(self):
+		cleaned_data=super().clean()
+		username=self.cleaned_data['username']
+		if User.objects.filter(username__iexact=username):
+		 	raise forms.ValidationError('Username taken')
+		else:
+			pass
+		return username
+
+class UserProfileInfoForm(forms.ModelForm):
+	def __init__(self, *args, **kwargs):
+		super(UserProfileInfoForm, self).__init__(*args, **kwargs)
+		self.fields['phone_number'].required = True
+	class Meta():
+		model=UserProfileInfo
+		fields=['phone_number']

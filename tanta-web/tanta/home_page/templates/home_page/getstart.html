@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% extends "home_page/base.html" %}
+{% load staticfiles %}
+{% block body_block %}
+<script>
+{% if messages %}
+    {% for message in messages %}
+    	alert(message);
+    {% endfor %}
+
+{% endif %}
+</script>
+<div class="container">
+<div class='jumbotron'>
+	{% if registered %}
+		<h1>Thank you for registering!</h1>
+	{% else %}
+		<h1>Get started with TantaPay today!</h1>
+		<form method="POST" enctype="multipart/form-data">
+			{% csrf_token %}
+			{{user_form.as_p}}
+			{{profile_form.as_p}}
+			<input type="submit" class="btn btn-primary" value="Sign up!">
+
+		</form>
+		
+	    {% endif %}
+<!-- 	    <script>
+	$('document').ready(function(){
+		$(function(){
+			mixpanel.identify()
+		});
+		$(function(){
+			var username = $('#id_username').val()
+			var phoneno = $('#id_phone_number').val()
+			mixpanel.people.set({
+    				"$username": username,
+    				"$phone": phoneno,
+    				"$created": new Date()});
+	});
+});
+	    </script> -->
+</div>
+</div>
+
+<script>
+	$('document').ready(function(){
+	$(function(){
+		mixpanel.track('Load Sign Up Page')
+	});
+</script>
+
+
+{% endblock body_block %}
